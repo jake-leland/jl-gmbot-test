@@ -20,7 +20,7 @@ function respond() {
 function postMessage(request) {
   var botResponse, options, body, botReq;
 
-  botResponse = JSON.stringify(request);
+  botResponse = "Hey look it's you";
 
   options = {
     hostname: 'api.groupme.com',
@@ -30,7 +30,13 @@ function postMessage(request) {
 
   body = {
     "bot_id" : botID,
-    "text" : botResponse
+    "text" : botResponse,
+    "attachments": [
+      {
+        "type"  : "image",
+        "url"   : request.avatar_url
+      }
+    ]
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
