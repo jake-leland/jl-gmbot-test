@@ -35,6 +35,12 @@ function postMessage(request) {
       {
         "type"  : "image",
         "url"   : request.avatar_url
+      },
+      {
+        "type"  : "location",
+        "lng"   : "40.000",
+        "lat"   : "70.000",
+        "name"  : "GroupMe HQ"
       }
     ]
   };
