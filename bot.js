@@ -6,7 +6,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /Howdy/i;
 
-  if(request.sender_type != "bot" && botRegex.test(request.text)) {
+  if(request.text && request.sender_type != "bot" && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(request);
     this.res.end();
