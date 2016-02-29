@@ -6,7 +6,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /./;
 
-  if(request.source_guid != "1281fc2b3766efd0333c8adde9878edb" && botRegex.test(request.text)) {
+  if(request.sender_type != "bot" && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(request);
     this.res.end();
