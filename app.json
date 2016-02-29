@@ -1,0 +1,7 @@
+{
+  "name": "Test bot",
+  "description": "Basic Groupme Bot written in Node",
+  "repository": "https://github.com/jake-leland/jl-gmbot-test",
+  "logo": "",
+  "keywords": []
+}
