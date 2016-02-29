@@ -20,7 +20,7 @@ function respond() {
 function postMessage(request) {
   var botResponse, options, body, botReq;
 
-  botResponse = request.toJSON();
+  botResponse = JSON.stringify(request);
 
   options = {
     hostname: 'api.groupme.com',
